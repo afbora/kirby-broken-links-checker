@@ -1,0 +1,21 @@
+{
+  "name": "kirby-broken-links-checker",
+  "description": "Broken links checker for Kirby 3.",
+  "main": "index.js",
+  "author": "Ahmet Bora",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx -y kirbyup src/index.js --watch",
+    "build": "npx -y kirbyup src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ahmetbora/kirby-broken-links-checker.git"
+  },
+  "posthtml": {
+    "recognizeSelfClosing": true
+  },
+  "dependencies": {
+    "broken-link-checker": "latest"
+  }
+}
