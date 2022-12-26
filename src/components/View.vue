@@ -109,6 +109,11 @@ export default {
     },
     // crawl helper based on `fetch()` function
     async crawlUrl(url, source = null, linkText = null) {
+      // reset cache at first
+      if (source === null) {
+        this.urls = [];
+      }
+
       // no need check again if the url checked
       if (this.isChecked(url) === true) {
         return false;
